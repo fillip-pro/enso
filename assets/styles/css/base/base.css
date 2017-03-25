@@ -1,0 +1,127 @@
+:root {
+    --root-background-color: rgba(216, 216, 216, 1);
+    --main-background-color: rgba(120, 120, 120, 0.5);
+    --main-foreground-color: rgba(16, 10, 10, 1);
+    --header-font: "HiraMaruProN-W4", "ヒラギノ角ゴ Pro W3", Arial, sans-serif;
+    --body-font: "Noto Sans", "Arial", sans-serif;
+}
+
+html {
+    background-color: rgba(256, 256, 256, 1);
+    color: var(--main-foreground-color);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header, main {
+    margin-left: auto;
+    max-width: 80em;
+}
+
+body {
+    background-color: var(--root-background-color);
+    background-image: url("/assets/images/rasters/backgroundx400.png");
+    background-position: center top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    line-height: 1.5rem;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    width: 100vw;
+}
+
+body > * {
+    clear: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+body > svg {
+    display: none;
+}
+
+main {
+    background: rgba(120, 120, 120, 0.5);
+}
+
+
+/*
+ * Selector highlights
+ */
+
+::-moz-selection {
+    color: white;
+    background: black;
+}
+
+::selection {
+    color: white;
+    background: black;
+}
+
+img::-moz-selection {
+    background-color: darkred;
+    color: darkred;
+}
+
+img::selection {
+    background: darkred;
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: var(--header-font);
+}
+
+h1 {
+    color: #5c5c5c;
+    font-size: 12vw;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+h1::after {
+    color: #ffffff;
+    content: '.';
+}
+
+h2 {
+    color: var(--root-background-color);
+    font-family: var(--body-font);
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin-bottom: 0.2em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    margin-top: 0.2em;
+    text-transform: lowercase;
+}
+
+h2::after {
+    color: #ffffff;
+    content: '.';
+}
+
+a {
+    color: #787878;
+    text-decoration: none;
+}
+
+a:active {
+    color: #787878;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #d8d8d8;
+}
