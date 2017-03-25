@@ -1,0 +1,67 @@
+body > footer {
+    align-content: center;
+    background-color: transparent;
+    color: #787878;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer nav {
+    align-self: center;
+    -webkit-align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    order: 0;
+    width: 90%;
+}
+
+footer > nav a:hover {
+    filter: invert(100%);
+}
+
+footer > nav img {
+    height: 48px;
+    width: 48px;
+}
+
+footer ul {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    line-height: 1em;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 13em;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+footer > nav > ul li {
+    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0.1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    padding-top: 0.1em;
+}
+
+footer > nav > ul > li {
+    margin: 2px;
+}
