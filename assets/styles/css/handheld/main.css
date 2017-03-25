@@ -1,0 +1,156 @@
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0.5em 0.5em 0.5em #5c5c5c;
+}
+
+main > nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+main > nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0.2em;
+}
+
+main > nav li {
+    width: 50%;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+}
+
+.card::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.card::before {
+    content: '';
+    float: left;
+    padding-bottom: 56.3%;
+}
+
+.card > h3 {
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    max-width: 75%;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    position: relative;
+    text-transform: lowercase;
+    z-index: 3;
+}
+
+.card > p {
+    display: none;
+    position: relative;
+    z-index: 3;
+}
+
+.card > img {
+    -webkit-animation: slidein 5s ease 1 normal;
+    -moz-animation: slidein 5s ease 1 normal;
+    -o-animation: slidein 5s ease 1 normal;
+    animation: slidein 5s ease 1 normal;
+    filter: grayscale(1);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: ease 1s 0s;
+    -moz-transition: ease 1s 0s;
+    transition: ease 1s 0s;
+    vertical-align: bottom;
+    width: 100%;
+    z-index: 0;
+}
+
+.card:hover > img {
+    -webkit-animation: slidein 5s ease 1 normal;
+    -moz-animation: slidein 5s ease 1 normal;
+    -o-animation: slidein 5s ease 1 normal;
+    animation: slidein 5s ease 1 normal;
+    filter: none;
+    mix-blend-mode: multiply;
+    -webkit-transition: ease 2s 0s;
+    -moz-transition: ease 2s 0s;
+    transition: ease 2s 0s;
+}
+
+.card svg {
+    -webkit-animation: slidein 5s ease 1 normal;
+    -moz-animation: slidein 5s ease 1 normal;
+    -o-animation: slidein 5s ease 1 normal;
+    animation: slidein 5s ease 1 normal;
+    display: inline-block;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    -webkit-transition: ease 1s 0s;
+    -moz-transition: ease 1s 0s;
+    transition: ease 1s 0s;
+    vertical-align: bottom;
+    width: 100%;
+    z-index: 2;
+}
+
+.card:hover svg {
+    -webkit-animation: slidein 5s ease 1 normal;
+    -moz-animation: slidein 5s ease 1 normal;
+    -o-animation: slidein 5s ease 1 normal;
+    animation: slidein 5s ease 1 normal;
+    opacity: 0;
+    -webkit-transition: ease 2s 0s;
+    -moz-transition: ease 2s 0s;
+    transition: ease 2s 0s;
+}
+
+main > nav:nth-child(1) .card {
+    background-color: #5c5c5c;
+}
+
+main > nav:nth-child(2) .card {
+    background-color: #a90002;
+}
+
+main > nav:nth-child(3) .card {
+    background-color: #EB6C04;
+}
+
+main > nav:nth-child(4) .card {
+    background-color: #103500;
+}
+
+main > nav:nth-child(1) .card svg {
+    fill: #d8d8d8;
+}
+
+main > nav:nth-child(2) .card svg {
+    fill: #d0021b;
+}
+
+main > nav:nth-child(3) .card svg {
+    fill: #F5A623;
+}
+
+main > nav:nth-child(4) .card svg {
+    fill: #417505;
+}
