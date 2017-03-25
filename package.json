@@ -1,0 +1,32 @@
+{
+    "name": "lehti",
+    "version": "0.2.0",
+    "description": "Naamio theme for Fillip.pro.",
+    "author": "Phil J. Laszkowicz <phil@fillip.pro> (https://github.com/siilime)",
+    "contributors": [
+      
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://gitlab.com/Fillip/lehti.git"
+    },
+    "license": "SEE LICENSE IN LICENSE.md",
+    "scripts": {
+      "build": "webpack",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "preferGlobal": false,
+    "private": true,
+    "engines": {
+      "node": ">= 6.11.4 <8.0"
+    },
+    "dependencies": {
+  
+    },
+    "devDependencies": {
+      "ts-loader": "^2.3.7",
+      "typescript": "^2.5.3",
+      "webpack": "^3.6.0"
+    }
+  }
+  

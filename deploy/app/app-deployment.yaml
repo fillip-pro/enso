@@ -1,0 +1,25 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: lehti-app
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: lehti-app
+    spec:
+      containers:
+        - name: lehti
+          image: fillip/lehti:0.2
+          env:
+            - name: NAAMIO_SOURCE
+              value: lehti
+            - name: NAAMIO_TEMPLATES
+              value: lehti/stencils/
+          ports:
+            - containerPort: 8090
+              protocol: TCP
+              name: naamio
+      imagePullSecrets:
+        - name: azure-secret
