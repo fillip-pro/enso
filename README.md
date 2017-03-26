@@ -1,3 +1,3 @@
-# Lehti
+# Ēostre
 
-Lehti is the primary Naamio stencil set for Fillip.pro.
+**Ēostre** is the Malline set for Fillip.pro.
