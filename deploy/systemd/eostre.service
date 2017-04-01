@@ -1,0 +1,28 @@
+[Unit]
+Description=Front-end web application for Fillip.
+Documentation=https://naamio.cloud
+After=docker.service
+Requires=docker.service
+
+[Service]
+Environment=NAAMIO_PORT=8090
+Type=simple
+RemainAfterExit=true
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=1h
+#User=naamio
+ExecStartPre=-/usr/bin/docker kill eostre  
+ExecStartPre=-/usr/bin/docker rm eostre  
+ExecStartPre=-/usr/bin/docker pull fillip/eostre:latest  
+ExecStart=/usr/bin/docker run -d \
+            --name eostre \
+            --restart always \
+            -v /etc/naamio:/etc/naamio:ro \
+            -v /var/log/naamio:/var/log/naamio \
+            -p 8090:8090 \
+            fillip/eostre:latest  
+ExecStop=/usr/bin/docker stop eostre
+
+[Install]
+WantedBy=multi-user.target  
