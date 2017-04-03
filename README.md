@@ -8,3 +8,10 @@
 **Ēostre** is the [Malline](https://github.com/Naamio/malline) stencil set for Fillip.pro.
 It includes the stencils, **Docker** configuration, **Kubernetes** configuration,
 images, scripts (TypeScript), and CSS.
+
+## Origin
+
+After a single day writing the original web application for Fillip.pro, 
+(called Lehti), progress stagnated as other projects took precidence. **Ēostre** 
+is the designated replacement for Lehti as an attempt to restart and refresh 
+the domain with up-to-date and relevant content.
