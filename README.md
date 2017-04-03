@@ -9,6 +9,18 @@
 It includes the stencils, **Docker** configuration, **Kubernetes** configuration,
 images, scripts (TypeScript), and CSS.
 
+## Goals
+
+**Ēostre** is intend to be a simple web application encompassing best practices and
+utilizing several preferred tools, including:
+
+ - Pure CSS over pre-processors.
+ - TypeScript, transpiled via the lightweight Webpack configuration.
+ - HTML 5.1 semantic markup, and standards compliant extensions.
+ - Web Components.
+
+Additionally, it is envisaged that it will always be deployed via **Docker** / **Kubernetes**.
+
 ## Origin
 
 After a single day writing the original web application for Fillip.pro, 
