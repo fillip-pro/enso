@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lehti-proxy
+  name: eostre-proxy
   labels:
-    run: lehti-proxy
+    run: eostre-proxy
 spec:
   type: LoadBalancer
   ports:
@@ -15,4 +15,4 @@ spec:
     protocol: TCP
     name: https
   selector:
-    run: lehti-proxy
+    run: eostre-proxy

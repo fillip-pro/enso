@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: lehti-proxy
+  name: eostre-proxy
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        run: lehti-proxy
+        run: eostre-proxy
     spec:
       containers:
-        - name: lehti-proxy
+        - name: eostre-proxy
           image: nginx:1.13.1
           ports:
             - containerPort: 443
