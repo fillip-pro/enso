@@ -10,7 +10,7 @@ spec:
         app: eostre-app
     spec:
       containers:
-        - name: lehti
+        - name: eostre
           image: fillip/eostre:0.0
           env:
             - name: NAAMIO_SOURCE
