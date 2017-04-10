@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        lehti: "./assets/scripts/ts/lehti.ts",
+        eostre: "./assets/scripts/ts/eostre.ts",
         analytics: "./assets/scripts/ts/util/analytics.ts",
         mail: "./assets/scripts/ts/util/mail.ts",
         //sw: './assets/scripts/ts/util/worker.ts',
