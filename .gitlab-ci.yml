@@ -15,7 +15,7 @@ build:
     - make prepare
     - make build
 
-deploy_review:
+deploy-review:
   stage: deploy
   script:
     - echo "Deploy a review app"
@@ -27,7 +27,7 @@ deploy_review:
   except:
     - master
 
-deploy_staging:
+deploy-staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
@@ -42,7 +42,7 @@ deploy_staging:
   only:
   - master
 
-deploy_release:
+deploy-release:
   stage: deploy
   script:
     - echo "Deploy to production server"
