@@ -68,7 +68,7 @@ release-image:
   services:
     - docker:dind
   before_script:
-    - docker login -u $DOCKER_HUB_TOKEN -p $CI_BUILD_TOKEN https://registry-1.docker.io/
+    - docker login -u $DOCKER_HUB_TOKEN -p $CI_BUILD_TOKEN registry-1.docker.io/
   script:
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
     - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:latest
