@@ -64,7 +64,7 @@ deploy-release:
 
 release-image:
   image: docker:latest
-  stage: release
+  stage: deploy
   services:
     - docker:dind
   before_script:
