@@ -1,4 +1,4 @@
-FROM omnijarstudio/naamio:0.2
+FROM naamio/naamio:0.0
 
 LABEL authors="Phil J. Łaszkowicz <phil@fillip.pro>"
 
