@@ -4,6 +4,13 @@ variables:
   CONTAINER_IMAGE: $CI_REGISTRY_IMAGE
   CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
 
+cache:
+  key: "$CI_PROJECT_NAME"
+  untracked: false
+  policy: push
+  paths:
+    - .build/
+
 image: node:9.3
 
 stages:
