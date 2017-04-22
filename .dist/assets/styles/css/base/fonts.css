@@ -1,0 +1,50 @@
+/**
+ * fonts.css
+ * Project: Eostre
+ * Fillip / Phil J. Łaszkowicz
+ */
+
+ @font-face {
+	font-family: 'HiraMaruProN-W4';
+	src: local('HiraMaruProN-W4'),
+		url('/assets/styles/fonts/HiraginoMaru/HiraMaruProN-W4.woff2') format('woff2'),
+		url('/assets/styles/fonts/HiraginoMaru/HiraMaruProN-W4.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-BoldItalic.woff2') format('woff2'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans'), local('NotoSans'),
+		url('/assets/styles/fonts/NotoSans/NotoSans.woff2') format('woff2'),
+		url('/assets/styles/fonts/NotoSans/NotoSans.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-Bold.woff2') format('woff2'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-Italic.woff2') format('woff2'),
+		url('/assets/styles/fonts/NotoSans/NotoSans-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}

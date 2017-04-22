@@ -4,7 +4,7 @@ LABEL authors="Phil J. Łaszkowicz <phil@fillip.pro>"
 
 RUN mkdir -p /usr/share/naamio/eostre
 
-COPY .dist /usr/share/naamio/eostre
+COPY .build /usr/share/naamio/eostre
 
 ENV NAAMIO_SOURCE=eostre
 ENV NAAMIO_TEMPLATES=eostre/stencils/
