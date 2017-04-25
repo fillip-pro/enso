@@ -83,3 +83,5 @@ release-image:
     - docker
   only: 
     - release
+  dependencies:
+    - build
