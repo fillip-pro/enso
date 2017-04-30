@@ -74,7 +74,7 @@ release-image:
   before_script:
   #docker login -u $DOCKER_HUB_TOKEN -p $CI_BUILD_TOKEN registry-1.docker.io/
   script:
-    - echo -n $DOCKER_HUB_SECRET | docker login -u $DOCKER_HUB_USERNAME --password-stdin docker.io/
+    - echo -n $DOCKER_HUB_SECRET | docker login -u $DOCKER_HUB_USERNAME --password-stdin
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
     - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:latest
     - docker push $CONTAINER_IMAGE:latest
