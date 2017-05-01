@@ -4,8 +4,6 @@ variables:
   CONTAINER_IMAGE: fillip/eostre #$CI_REGISTRY_IMAGE
   CONTAINER_RELEASE_IMAGE: fillip/eostre:latest #$CI_REGISTRY_IMAGE:latest
 
-image: node:9.3
-
 stages:
   - test
   - build
@@ -16,13 +14,14 @@ test:
   script: echo "Running tests"
 
 build:
+  image: node:9.3
   stage: build
   script: 
     - make prepare
     - make build
   artifacts:
     paths:
-    - .build/
+      - .build/
     expire_in: 1 week
 
 deploy-review:
@@ -45,12 +44,12 @@ deploy-staging:
     name: staging
     url: https://staging.fillip.pro
   only:
-  - master
+    - master
   artifacts:
     paths:
-    - public
+      -  .build
   only:
-  - master
+    - master
 
 deploy-release:
   stage: deploy
@@ -61,18 +60,16 @@ deploy-release:
     url: https://fillip.pro
   artifacts:
     paths:
-    - public
+      - public
   when: manual
   only:
-  - release
+    - release
 
 release-image:
   image: docker:latest
   stage: deploy
   services:
     - docker:dind
-  before_script:
-  #docker login -u $DOCKER_HUB_TOKEN -p $CI_BUILD_TOKEN registry-1.docker.io/
   script:
     - echo -n $DOCKER_HUB_SECRET | docker login -u $DOCKER_HUB_USERNAME --password-stdin
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
