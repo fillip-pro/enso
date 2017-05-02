@@ -1,8 +1,8 @@
 variables:
   DOCKER_DRIVER: overlay
-  CONTAINER_TEST_IMAGE: fillip/eostre:$CI_BUILD_REF_NAME #$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
   CONTAINER_IMAGE: fillip/eostre #$CI_REGISTRY_IMAGE
-  CONTAINER_RELEASE_IMAGE: fillip/eostre:latest #$CI_REGISTRY_IMAGE:latest
+  CONTAINER_TEST_IMAGE: $CONTAINER_IMAGE:$CI_BUILD_REF_NAME #$CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
+  CONTAINER_RELEASE_IMAGE: $CONTAINER_IMAGE:latest #$CI_REGISTRY_IMAGE:latest
 
 stages:
   - test
@@ -47,7 +47,7 @@ deploy-staging:
     - master
   artifacts:
     paths:
-      -  .build
+      - .build/
   only:
     - master
 
@@ -60,7 +60,7 @@ deploy-release:
     url: https://fillip.pro
   artifacts:
     paths:
-      - public
+      - .build/
   when: manual
   only:
     - release
