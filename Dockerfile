@@ -1,6 +1,8 @@
 FROM naamio/naamio:0.0
 
-LABEL authors="Phil J. Łaszkowicz <phil@fillip.pro>"
+LABEL description="Front-end application for Fillip.pro"
+LABEL maintainer="Phil J. Łaszkowicz <phil@fillip.pro>"
+LABEL version="0.2"
 
 RUN mkdir -p /usr/share/naamio/eostre
 
