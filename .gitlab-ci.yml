@@ -24,7 +24,7 @@ build:
       - .build/
     expire_in: 1 week
 
-deploy-review:
+deploy:review:
   stage: deploy
   script:
     - echo "Deploy a review app"
@@ -36,7 +36,7 @@ deploy-review:
   except:
     - master
 
-deploy-staging:
+deploy:staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
@@ -51,7 +51,7 @@ deploy-staging:
   only:
     - master
 
-deploy-release:
+deploy:release:
   stage: deploy
   script:
     - echo "Deploy to production server"
@@ -65,7 +65,7 @@ deploy-release:
   only:
     - release
 
-release-image:
+build:container:
   image: docker:latest
   stage: deploy
   services:
@@ -73,12 +73,30 @@ release-image:
   script:
     - echo -n $DOCKER_HUB_SECRET | docker login -u $DOCKER_HUB_USERNAME --password-stdin
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
-    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:latest
-    - docker push $CONTAINER_IMAGE:latest
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_RELEASE_IMAGE
+    - docker push $CONTAINER_RELEASE_IMAGE
   when: manual
   tags:
     - docker
   only: 
     - release
   dependencies:
-    - build
+    - build:release
+
+tag:container:
+  image: docker:latest
+  stage: deploy
+  services:
+    - docker:dind
+  script:
+    - echo -n $DOCKER_HUB_SECRET | docker login -u $DOCKER_HUB_USERNAME --password-stdin
+    - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
+    - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:$CI_BUILD_REF_NAME
+    - docker push $CONTAINER_IMAGE:$CI_BUILD_REF_NAME
+  when: manual
+  tags:
+    - docker
+  only: 
+    - tags
+  dependencies:
+    - build:release
