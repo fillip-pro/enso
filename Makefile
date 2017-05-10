@@ -88,4 +88,6 @@ build-cluster: build-container
 	kubectl create -f deploy/app/app-service.yaml | true
 	kubectl create -f deploy/app/app-deployment.yaml | true
 
-.PHONY: prepare clean build
+all: build
+
+.PHONY: all prepare clean build
