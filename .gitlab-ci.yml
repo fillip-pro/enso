@@ -43,8 +43,6 @@ deploy:staging:
   environment:
     name: staging
     url: https://staging.fillip.pro
-  only:
-    - master
   artifacts:
     paths:
       - .build/
