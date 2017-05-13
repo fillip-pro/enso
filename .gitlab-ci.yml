@@ -109,7 +109,7 @@ nightly:container:
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
     - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:nightly
     - docker push $CONTAINER_IMAGE:nightly
-  when: manual
+  when: on_success
   tags:
     - docker
   only:
