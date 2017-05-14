@@ -91,7 +91,7 @@ tag:container:
     - docker build --pull -t $CONTAINER_TEST_IMAGE -f Dockerfile .
     - docker tag $CONTAINER_TEST_IMAGE $CONTAINER_IMAGE:$CI_BUILD_REF_NAME
     - docker push $CONTAINER_IMAGE:$CI_BUILD_REF_NAME
-  when: manual
+  when: on_success
   tags:
     - docker
   only: 
