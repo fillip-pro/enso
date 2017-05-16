@@ -40,6 +40,10 @@ clean:
 		rm -rf $(BUILD_DIR) ; \
 	fi
 
+test:
+
+	npm run test
+
 # Build distribution bundle
 build: clean
 
@@ -88,6 +92,6 @@ build-cluster: build-container
 	kubectl create -f deploy/app/app-service.yaml | true
 	kubectl create -f deploy/app/app-deployment.yaml | true
 
-all: build
+all: test build
 
 .PHONY: all prepare clean build

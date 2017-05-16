@@ -10,8 +10,12 @@ stages:
   - deploy
 
 test:
+  image: node:9.3
   stage: test
-  script: echo "Running tests"
+  script: 
+    - echo "Running tests"
+    - make prepare
+    - make test
 
 build:
   image: node:9.3
