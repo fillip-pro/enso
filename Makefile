@@ -3,6 +3,8 @@ CONTAINER_NAME = eostre
 CONTAINER_VERSION = 0.0
 CONTAINER_URL = fillip/$(CONTAINER_NAME):$(CONTAINER_VERSION)
 
+NPM_BIN = $(shell npm bin)
+
 BUILD_DIR = .build
 SRC_BUILD_DIR = /lib
 ASSETS_DIR = assets
@@ -40,9 +42,9 @@ clean:
 		rm -rf $(BUILD_DIR) ; \
 	fi
 
-test:
+test: build
 
-	npm run test
+	$(NPM_BIN)/mocha $(JS_BUILD_DIR)/**/*.spec.js
 
 # Build distribution bundle
 build: clean

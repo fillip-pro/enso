@@ -4,12 +4,12 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        eostre: "./assets/scripts/ts/eostre.ts",
-        analytics: "./assets/scripts/ts/util/analytics.ts",
-        mail: "./assets/scripts/ts/util/mail.ts",
+        eostre: "./assets/scripts/src/eostre.ts",
+        analytics: "./assets/scripts/src/util/analytics.ts",
+        mail: "./assets/scripts/src/util/mail.ts",
         //sw: './assets/scripts/ts/util/worker.ts',
         core: [
-            "./assets/scripts/ts/util/logging.ts"
+            "./assets/scripts/src/util/logging.ts"
         ]
     },
     module: {
