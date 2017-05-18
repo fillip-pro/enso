@@ -43,8 +43,8 @@ clean:
 	fi
 
 test: build
-
-	$(NPM_BIN)/mocha $(JS_BUILD_DIR)/**/*.spec.js
+	
+	$(NPM_BIN)/mocha -r ts-node/register assets/scripts/test/**/*.spec.ts #$(JS_BUILD_DIR)/**/*.spec.js
 
 # Build distribution bundle
 build: clean
