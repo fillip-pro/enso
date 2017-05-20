@@ -18,7 +18,9 @@
   "engines": {
     "node": ">= 8.9.3 <9.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vuejs": "^2.0.19"
+  },
   "devDependencies": {
     "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.45",

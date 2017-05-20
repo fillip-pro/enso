@@ -1,3 +1,4 @@
+import * as Eostre from '../src/eostre';
 import { expect } from 'chai';
 import 'mocha';
 
