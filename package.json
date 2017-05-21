@@ -19,6 +19,7 @@
     "node": ">= 8.9.3 <9.0"
   },
   "dependencies": {
+    "vue-custom-element": "^2.0.0",
     "vuejs": "^2.0.19"
   },
   "devDependencies": {
