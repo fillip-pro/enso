@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/chai": "^4.0.10",
     "@types/mocha": "^2.2.45",
+    "@webcomponents/webcomponentsjs": "^1.0.22",
     "chai": "^4.1.2",
     "mocha": "^4.0.1",
     "ts-loader": "^3.2.0",
