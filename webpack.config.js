@@ -8,6 +8,9 @@ module.exports = {
         analytics: "./assets/scripts/src/util/analytics.ts",
         mail: "./assets/scripts/src/util/mail.ts",
         //sw: './assets/scripts/ts/util/worker.ts',
+        webcomponents: [
+            "@webcomponents/webcomponentsjs/webcomponents-hi-sd-ce"
+        ],
         core: [
             "./assets/scripts/src/util/logging.ts"
         ]
@@ -40,10 +43,9 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: "core"
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "runtime"
+            names: ["core", "webcomponents"],
+            filename: "[name].js",
+            minChunks: Infinity
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'manifest',
